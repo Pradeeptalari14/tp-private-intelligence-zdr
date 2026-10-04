@@ -1,0 +1,31 @@
+name: Private Intelligence ZDR CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test-zdr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          pip install fastapi uvicorn pydantic openai pytest flake8
+      - name: Syntax & Lint Check
+        run: |
+          python -m py_compile zdr_enclave_gateway.py ephemeral_key_shredder.py
+          flake8 zdr_enclave_gateway.py ephemeral_key_shredder.py --count --select=E9,F63,F7,F82 --show-source --statistics
+          flake8 zdr_enclave_gateway.py ephemeral_key_shredder.py --count --exit-zero --max-complexity=10 --max-line-length=120 --statistics
+      - name: Test Ephemeral Key Shredder
+        run: |
+          python ephemeral_key_shredder.py
+      - name: Validate Scripts
+        run: |
+          bash scripts/validate.sh --dry-run
