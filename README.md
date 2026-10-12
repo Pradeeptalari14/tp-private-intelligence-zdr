@@ -1,3 +1,6 @@
+[![Ecosystem](https://img.shields.io/badge/Portfolio%20Ecosystem-341%20Studios-6366f1.svg)](https://pradeeptalari.me/projects/)
+[![Architecture DAG](https://img.shields.io/badge/Architecture-DAG%20%26%20Course-10b981.svg)](https://pradeeptalari.me/tools/repo-learning/)
+
 # OpenAI Private Intelligence & Zero Data Retention (ZDR) Enclave Architecture
 
 [![CI Status](https://github.com/Pradeeptalari14/tp-private-intelligence-zdr/actions/workflows/zdr-ci.yml/badge.svg)](https://github.com/Pradeeptalari14/tp-private-intelligence-zdr/actions)
@@ -176,3 +179,6 @@ tp-private-intelligence-zdr/
 ## 📜 License & Compliance
 
 Licensed under the [MIT License](LICENSE). Built for security and SRE teams operationalizing OpenAI DevDay 2026 Private Intelligence architectures.
+
+---
+*Synchronized with [OpenAI Private Intelligence & Zero Data Retention (ZDR) Studio Studio](https://pradeeptalari.me/tools/private-intelligence-zdr/) & [Repository Learning DAG](https://pradeeptalari.me/tools/repo-learning/) — [Talari Pradeep Portfolio](https://pradeeptalari.me)*
